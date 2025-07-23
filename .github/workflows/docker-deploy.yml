@@ -30,3 +30,4 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/priyam-react-app-quoting:latest
+          platforms: linux/amd64,linux/arm64
