@@ -30,15 +30,3 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/priyam-react-app-quoting:latest
-
-      - name: Deploy to remote server via SSH
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.DEPLOY_SERVER }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.DEPLOY_KEY }}
-          script: |
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/priyam-react-app-quoting:latest
-            docker stop priyam-react-app-quoting || true
-            docker rm priyam-react-app-quoting || true
-            docker run -d --name priyam-react-app-quoting -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/priyam-react-app-quoting:latest
