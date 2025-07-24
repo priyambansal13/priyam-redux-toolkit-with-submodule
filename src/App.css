@@ -1,3 +1,13 @@
+.ag-grid-container {
+  height: 400px;
+  width: 100%;
+  max-width: 900px;
+  margin: 32px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.08);
+  background: #f8fafc;
+  overflow: hidden;
+}
 .App {
   text-align: center;
 }
@@ -26,6 +36,38 @@
 
 .App-link {
   color: #61dafb;
+}
+
+/* ag-Grid custom styles */
+.ag-theme-alpine {
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.08);
+  margin: 32px auto;
+  max-width: 900px;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-size: 1rem;
+  background: #f8fafc;
+}
+
+.ag-theme-alpine .ag-header {
+  background: linear-gradient(90deg, #4f8cff 0%, #6fc3ff 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.ag-theme-alpine .ag-row {
+  background: #fff;
+  transition: background 0.2s;
+}
+.ag-theme-alpine .ag-row-hover {
+  background: #e6f0ff !important;
+}
+.ag-theme-alpine .ag-cell {
+  border-right: 1px solid #e0e7ef;
+}
+.ag-theme-alpine .ag-cell:last-child {
+  border-right: none;
 }
 
 @keyframes App-logo-spin {
